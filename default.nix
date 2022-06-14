@@ -14,7 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  vscode-extensions = pkgs.callPackage ./pkgs/vscode-extensions { };
+  vscode-extensions = pkgs.callPackage ./pkgs/vscode-extensions { inherit pkgs; };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }

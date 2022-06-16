@@ -28,7 +28,9 @@ let
   aliases = self: super: {
     ms-vscode = lib.recursiveUpdate super.ms-vscode { inherit (super.golang) go; };
   };
+  
+  overlays = [];
 
-  toFix = lib.foldl' (lib.flip lib.extends) baseExtensions;
+  toFix = lib.foldl' (lib.flip lib.extends) baseExtensions overlays;
 in
 lib.fix toFix

@@ -20,6 +20,7 @@ To use platformio-ide package, you need to add the following lines to your home-
     enable = true;
     extensions = with pkgs;[
       nur.repos.twogn.vscode-extensions.platformio.platformio-ide
+      # for more informations about declaring vscode extensions, please check out the wiki written by nix community: https://nixos.wiki/wiki/Visual_Studio_Code
     ];
   };
 }
